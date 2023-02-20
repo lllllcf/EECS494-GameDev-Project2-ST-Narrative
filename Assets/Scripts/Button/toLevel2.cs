@@ -7,6 +7,7 @@ public class toLevel2 : MonoBehaviour
 {
     public void click()
     {
+        print("aa");
         SceneManager.LoadScene("Level2");
     }
 }

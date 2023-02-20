@@ -1,1 +1,8 @@
 进入下一关的方式可以不唯一： 如，去太阳上
+
+camera 4 14 24
+ECS controller 设计一下
+
+navigation 丢掉
+
+tutorial参差一点更好看

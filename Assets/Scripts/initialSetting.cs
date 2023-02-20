@@ -8,7 +8,7 @@ public class initialSetting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Screen.SetResolution(1455, 905, false);
+        //Screen.SetResolution(1455, 905, false);
     }
 
     // Update is called once per frame

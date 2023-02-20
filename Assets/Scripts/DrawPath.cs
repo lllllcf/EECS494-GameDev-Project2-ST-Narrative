@@ -17,5 +17,4 @@ public class DrawPath : MonoBehaviour
         //Instantiate(trail, transform.position, Quaternion.identity);
     }
 
-    
-}
+    }
