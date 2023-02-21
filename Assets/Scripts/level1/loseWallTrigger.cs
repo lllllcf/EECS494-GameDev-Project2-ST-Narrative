@@ -21,7 +21,7 @@ public class loseWallTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            winLoseController.GetComponent<winLoseControl>().lose_game();
+            winLoseController.GetComponent<winLoseControlLevel1>().lose_game();
         }
 
     }

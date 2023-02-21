@@ -7,7 +7,7 @@ public class transferToAnotherDoor : MonoBehaviour
     public GameObject desDoor;
     public GameObject player;
 
-    private bool nearWater;
+    private bool nearWater = false;
     // Start is called before the first frame update
     void Start()
     {

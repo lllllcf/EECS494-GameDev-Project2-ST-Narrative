@@ -24,13 +24,13 @@ public class changeColor : MonoBehaviour
         if(other.gameObject.tag == "Player" && !collided)
         {
             GetComponent<SpriteRenderer>().color = newColor;
-            winLoseController.GetComponent<winLoseControl>().add_count();
+            winLoseController.GetComponent<winLoseControlLevel1>().add_count();
             collided = true;
         }
         else if (other.gameObject.tag == "Player" && collided)
         {
             if (!other.gameObject.GetComponent<InstantMove>().get_iv())
-                winLoseController.GetComponent<winLoseControl>().lose_game();
+                winLoseController.GetComponent<winLoseControlLevel1>().lose_game();
         }
 
     }
