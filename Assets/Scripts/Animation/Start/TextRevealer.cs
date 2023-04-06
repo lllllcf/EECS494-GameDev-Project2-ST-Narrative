@@ -66,11 +66,11 @@ public class TextRevealer : MonoBehaviour
 		isRevealing = false;
 	}
 
-	public void RevealNextParagraphAsync()
+	public void RevealNextParagraphAsync(GameObject my_name, GameObject by)
 	{
-		StartCoroutine(RevealNextParagraph());
+		StartCoroutine(RevealNextParagraph(my_name, by));
 	}
-	public IEnumerator RevealNextParagraph()
+	public IEnumerator RevealNextParagraph(GameObject my_name, GameObject by)
 	{
 		if (IsAllRevealed() || isRevealing) yield break;
 
@@ -115,6 +115,8 @@ public class TextRevealer : MonoBehaviour
 			allRevealed.Invoke();
 
 		isRevealing = false;
+		my_name.SetActive(true);
+		by.SetActive(true);
 	}
 
 	public bool IsAllRevealed()
@@ -156,13 +158,14 @@ public class TextRevealer : MonoBehaviour
 	}
 
 
-	public void RevealText(GameObject text_object)
+	public void RevealText(GameObject text_object, GameObject my_name, GameObject by)
 	{
 		text = text_object.GetComponent<TMPro.TextMeshProUGUI>();
 		//if (string.IsNullOrEmpty(originalString))
 		RestartWithText(text.text);
 
-		RevealNextParagraphAsync();
+		RevealNextParagraphAsync(my_name, by);
+		
 	}
 
 }

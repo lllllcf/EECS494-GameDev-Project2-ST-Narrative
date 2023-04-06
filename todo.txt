@@ -1,19 +1,8 @@
-进入下一关的方式可以不唯一： 如，去太阳上
 
-ECS controller 设计一下,注意有些地方要禁用，要不全部禁用
 
-navigation 丢掉
 
 tutorial参差一点更好看
-start 不能提前按按钮
-
 tutorial 加图片
-
 loseword winword 转场消失和打字效果
-
-测试所有的wall
-
 选关卡界面可以做成图片式
 加入一些动画
-
-两种死法

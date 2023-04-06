@@ -20,6 +20,9 @@ public class ToT2 : MonoBehaviour
 
     string message2, message3;
 
+    public AudioClip word_clip;
+    bool clip = false;
+
     void Start()
     {
         sp = GameObject.Find("shadowPlayer");
@@ -106,7 +109,9 @@ public class ToT2 : MonoBehaviour
         //yield return new WaitForSeconds(1.0f);
         foreach (char letter in message2.ToCharArray())
         {
-            //AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
+            clip = !clip;
+            if (clip)
+                AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
             text2.GetComponent<TMPro.TextMeshProUGUI>().text += letter;
             yield return 0;
             yield return new WaitForSeconds(letterPause);
@@ -166,7 +171,9 @@ public class ToT2 : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         foreach (char letter in message3.ToCharArray())
         {
-            //AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
+            clip = !clip;
+            if (clip)
+                AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
             text3.GetComponent<TMPro.TextMeshProUGUI>().text += letter;
             yield return 0;
             yield return new WaitForSeconds(letterPause);

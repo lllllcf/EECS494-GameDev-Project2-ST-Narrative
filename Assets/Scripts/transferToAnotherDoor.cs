@@ -6,6 +6,7 @@ public class transferToAnotherDoor : MonoBehaviour
 {
     public GameObject desDoor;
     public GameObject player;
+    public AudioClip tp_clip;
 
     private bool nearWater = false;
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class transferToAnotherDoor : MonoBehaviour
     {
         if (nearWater && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
         {
+            AudioSource.PlayClipAtPoint(tp_clip, Camera.main.transform.position);
             player.transform.position = desDoor.transform.position;
         }
     }

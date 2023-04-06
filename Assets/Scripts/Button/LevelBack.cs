@@ -11,6 +11,17 @@ public class LevelBack : MonoBehaviour
     public GameObject invinCanvas;
     public void click()
     {
+        global.level1_lose_word = false;
+        global.level2_lose_word = false;
+        global.level3_lose_word = false;
+        global.level4_lose_word = false;
+        global.level5_lose_word = false;
+        global.level6_lose_word = false;
+        global.level7_lose_word = false;
+        global.level8_lose_word = false;
+        global.level9_lose_word = false;
+
+        print("click");
         StartCoroutine(piece1Back());
 
     }

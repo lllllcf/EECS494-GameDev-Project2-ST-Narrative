@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6780447896761073950}
   - component: {fileID: 6780447896761073951}
   - component: {fileID: 6780447896761073948}
-  - component: {fileID: 6780447896761073949}
+  - component: {fileID: 6940734732622536402}
   m_Layer: 0
   m_Name: part_level2
   m_TagString: Untagged
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6780447896761073949
+--- !u!114 &6940734732622536402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6780447896761073947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78947118609663a4ead507e57009ce64, type: 3}
+  m_Script: {fileID: 11500000, guid: 40e920097613883459ef94c16e126161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newColor: {r: 0.8745099, g: 0.8745099, b: 0.8745099, a: 0}
+  newColor: {r: 0, g: 0, b: 0, a: 0}

@@ -1,0 +1,7 @@
+I received a lot of valid feedback from GSI during the gold spike phase. 
+First of all, he thought I did a good job in the gold spike stage, 
+my idea and implementation are at a relatively good level, and then he suggested that 
+I could make more levels, give players some more friendly tips including victory and defeat, 
+modify some of the bugs exposed in the levels, and improve my gold spike mechanism. 
+In the gold stage, I fixed the bugs I encountered earlier, designed and made new levels, 
+added user-friendly hints and a silky smooth scene switching mechanism, and added music and sound effects.

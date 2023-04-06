@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RemoveColor : MonoBehaviour
+public class changeColor2 : MonoBehaviour
 {
+    public Color newColor;
     bool collided = false;
     GameObject winLoseController;
 
@@ -22,14 +23,14 @@ public class RemoveColor : MonoBehaviour
     {
         if(other.gameObject.tag == "Player" && !collided)
         {
-            GetComponent<SpriteRenderer>().enabled = false;
-            winLoseController.GetComponent<winLoseControl>().add_count();
+            GetComponent<SpriteRenderer>().color = newColor;
+            winLoseController.GetComponent<winLoseControlLevel2>().add_count();
             collided = true;
         }
         else if (other.gameObject.tag == "Player" && collided)
         {
             if (!other.gameObject.GetComponent<InstantMove>().get_iv())
-                winLoseController.GetComponent<winLoseControl>().lose_game();
+                winLoseController.GetComponent<winLoseControlLevel2>().lose_game();
         }
 
     }

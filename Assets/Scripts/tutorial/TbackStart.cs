@@ -19,6 +19,9 @@ public class TbackStart : MonoBehaviour
 
     string message1, message2;
 
+    public AudioClip word_clip;
+    bool clip = false;
+
     void Start()
     {
 
@@ -103,7 +106,9 @@ public class TbackStart : MonoBehaviour
         //yield return new WaitForSeconds(1.0f);
         foreach (char letter in message1.ToCharArray())
         {
-            //AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
+            clip = !clip;
+            if (clip)
+                AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
             text1.GetComponent<TMPro.TextMeshProUGUI>().text += letter;
             yield return 0;
             yield return new WaitForSeconds(letterPause);
@@ -165,7 +170,9 @@ public class TbackStart : MonoBehaviour
         //yield return new WaitForSeconds(1.0f);
         foreach (char letter in message2.ToCharArray())
         {
-            //AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
+            clip = !clip;
+            if (clip)
+                AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
             text2.GetComponent<TMPro.TextMeshProUGUI>().text += letter;
             yield return 0;
             yield return new WaitForSeconds(letterPause);

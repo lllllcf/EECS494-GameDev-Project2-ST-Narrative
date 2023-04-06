@@ -130,3 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desDoor: {fileID: 0}
   player: {fileID: 0}
+  tp_clip: {fileID: 8300000, guid: b6ba2032c411a1743839e9a773c07e20, type: 3}

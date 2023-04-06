@@ -8,6 +8,8 @@ public class ShadowPlayerPosition : MonoBehaviour
     Rigidbody rb;
     private Queue<Vector3> data;
     private Queue<float> times;
+
+    public float shadowplayer_time = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class ShadowPlayerPosition : MonoBehaviour
     {
         data.Enqueue(player.transform.position);
         times.Enqueue(Time.time);
-        while(times.Peek() < Time.time - 2) {
+        while(times.Peek() < Time.time - shadowplayer_time) {
             data.Dequeue();
             times.Dequeue();
         }

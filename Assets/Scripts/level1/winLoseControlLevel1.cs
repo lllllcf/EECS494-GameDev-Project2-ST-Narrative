@@ -33,6 +33,7 @@ public class winLoseControlLevel1 : MonoBehaviour
     {
         if (count == total_count)
         {
+            global.level1_lose_word = false;
             level.SetActive(false);
             winWord.SetActive(true);
             lose_trigger.SetActive(false);

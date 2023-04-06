@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shadowPlayer: {fileID: 0}
+  back_clip: {fileID: 8300000, guid: 3fcf8d1a6ac05604980f386263c5657b, type: 3}
 --- !u!198 &3575090864951454839
 ParticleSystem:
   m_ObjectHideFlags: 0

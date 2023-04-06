@@ -15,6 +15,9 @@ public class EnterScene : MonoBehaviour
 
     string message1;
 
+    public AudioClip word_clip;
+    bool clip = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +58,9 @@ public class EnterScene : MonoBehaviour
             //yield return new WaitForSeconds(1.0f);
             foreach (char letter in message1.ToCharArray())
             {
-                //AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
+                clip = !clip;
+                if (clip)
+                    AudioSource.PlayClipAtPoint(word_clip, Camera.main.transform.position);
                 text1.GetComponent<TMPro.TextMeshProUGUI>().text += letter;
                 yield return 0;
                 yield return new WaitForSeconds(letterPause);

@@ -24,7 +24,9 @@ public class StartFade : MonoBehaviour
 
     IEnumerator canvasFade()
     {
+        
         yield return new WaitForSeconds(pre_wait_time);
+        invinCanvas.SetActive(true);
         //**************fade the screen********************************************//
         while (canvas.alpha < 1)
         {
@@ -49,14 +51,15 @@ public class StartFade : MonoBehaviour
         canvas.interactable = false;
 
         Button1.SetActive(true);
-        GetComponent<TextRevealer>().RevealText(b1);
-        Button1.SetActive(true);
+        //GetComponent<TextRevealer>().RevealText(b1);
+        //Button1.SetActive(true);
         yield return new WaitForSeconds(button_time);
-        Button2.SetActive(true);
-        GetComponent<TextRevealer>().RevealText(b2);
+        //Button2.SetActive(true);
+        //GetComponent<TextRevealer>().RevealText(b2);
         Button2.SetActive(true);
 
         invinCanvas.SetActive(false);
+
     }
 
 
