@@ -82,6 +82,7 @@ public class ToT2 : MonoBehaviour
             // new position on line from "initial_pos" to "dest_pos"
             progress = (Time.time - initial_time) / camera_duration_sec;
             Vector3 new_position = Vector3.Lerp(initial_pos, dest_pos, progress);
+
             Camera.main.gameObject.transform.position = new_position;
 
             // yield until the end of the frame, allowing other code / coroutines to run
